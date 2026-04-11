@@ -1,0 +1,125 @@
+[
+  {
+    "id": "ART-001",
+    "nom": "Fally Ipupa",
+    "genre": "Afrobeat",
+    "pays": "RDC",
+    "albums": [
+      { "titre": "Power Kosa Leka", "annee": 2013, "streams": 4200000 },
+      { "titre": "Tokooos", "annee": 2017, "streams": 6800000 }
+    ]
+  },
+  {
+    "id": "ART-002",
+    "nom": "Yemi Alade",
+    "genre": "Afropop",
+    "pays": "Nigeria",
+    "albums": [
+      { "titre": "King of Queens", "annee": 2014, "streams": 3500000 },
+      { "titre": "Mama Africa", "annee": 2016, "streams": 5100000 },
+      { "titre": "Woman of Steel", "annee": 2019, "streams": 4700000 }
+    ]
+  },
+  {
+    "id": "ART-003",
+    "nom": "Sarkodie",
+    "genre": "Hip-Hop",
+    "pays": "Ghana",
+    "albums": [
+      { "titre": "Rapperholic", "annee": 2012, "streams": 3900000 }
+    ]
+  },
+  {
+    "id": "ART-004",
+    "nom": "Angélique Kidjo",
+    "genre": "World Music",
+    "pays": "Bénin",
+    "albums": [
+      { "titre": "Eve", "annee": 2014, "streams": 2100000 },
+      { "titre": "Celia", "annee": 2019, "streams": 3300000 }
+    ]
+  },
+  {
+    "id": "ART-005",
+    "nom": "Burna Boy",
+    "genre": "Afrofusion",
+    "pays": "Nigeria",
+    "albums": [
+      { "titre": "Outside", "annee": 2018, "streams": 7200000 },
+      { "titre": "African Giant", "annee": 2019, "streams": 9800000 },
+      { "titre": "Twice as Tall", "annee": 2020, "streams": 8700000 },
+      { "titre": "I Told Them", "annee": 2023, "streams": 7600000 }
+    ]
+  },
+  {
+    "id": "ART-006",
+    "nom": "Davido",
+    "genre": "Afrobeat",
+    "pays": "Nigeria",
+    "albums": [
+      { "titre": "Omo Baba Olowo", "annee": 2012, "streams": 4100000 },
+      { "titre": "A Good Time", "annee": 2019, "streams": 6900000 }
+    ]
+  },
+  {
+    "id": "ART-007",
+    "nom": "Diamond Platnumz",
+    "genre": "Bongo Flava",
+    "pays": "Tanzanie",
+    "albums": [
+      { "titre": "Lala Salama", "annee": 2012, "streams": 2500000 },
+      { "titre": "A Boy from Tandale", "annee": 2018, "streams": 5600000 },
+      { "titre": "First of All", "annee": 2022, "streams": 4300000 }
+    ]
+  },
+  {
+    "id": "ART-008",
+    "nom": "Aya Nakamura",
+    "genre": "Afropop",
+    "pays": "Mali",
+    "albums": [
+      { "titre": "Journal Intime", "annee": 2017, "streams": 3000000 }
+    ]
+  },
+  {
+    "id": "ART-009",
+    "nom": "Koffi Olomide",
+    "genre": "Rumba",
+    "pays": "RDC",
+    "albums": [
+      { "titre": "Loi", "annee": 1997, "streams": 1500000 },
+      { "titre": "Attentat", "annee": 1999, "streams": 1800000 },
+      { "titre": "13ème Apôtre", "annee": 2006, "streams": 2100000 }
+    ]
+  },
+  {
+    "id": "ART-010",
+    "nom": "Josey",
+    "genre": "Coupé-Décalé",
+    "pays": "Côte d'Ivoire",
+    "albums": [
+      { "titre": "Cocktail", "annee": 2018, "streams": 2200000 }
+    ]
+  },
+  {
+    "id": "ART-011",
+    "nom": "Mr Eazi",
+    "genre": "Afrobeat",
+    "pays": "Nigeria",
+    "albums": [
+      { "titre": "Life is Eazi Vol. 1", "annee": 2017, "streams": 4800000 },
+      { "titre": "Life is Eazi Vol. 2", "annee": 2018, "streams": 5300000 }
+    ]
+  },
+  {
+    "id": "ART-012",
+    "nom": "Sauti Sol",
+    "genre": "Afropop",
+    "pays": "Kenya",
+    "albums": [
+      { "titre": "Live and Die in Afrika", "annee": 2015, "streams": 2600000 },
+      { "titre": "Afrikan Sauce", "annee": 2019, "streams": 3400000 },
+      { "titre": "Midnight Train", "annee": 2020, "streams": 3900000 }
+    ]
+  }
+]
