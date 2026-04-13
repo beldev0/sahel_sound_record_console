@@ -1,5 +1,6 @@
 import json
 import sys
+from datetime import datetime
 
 def charger_catalogue(chemin) :
     """ Charge et retourne le JSON depuis le fichier """
@@ -39,3 +40,16 @@ def lister_artistes(catalogue) :
         )
     
     return data
+
+# Part Houéfa
+
+def ajouter_log(titre_album):
+    """
+    Ajoute une ligne dans historique.log a chaque modifications du catalogue
+    """
+    date_heure = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    ligne = f"{date_heure} - INFOS : L'album {titre_album} a été enregistré.\n"
+    
+    with open("historique.log", "a", encoding="utf-8") as f:
+        f.write(ligne)
