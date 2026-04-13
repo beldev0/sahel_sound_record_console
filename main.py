@@ -175,14 +175,17 @@ while True :
                     'annee'   : annee,
                     'streams' : streams
                 }
-                print('Nouveau album crée')
+                print('Nouveau album crée en mémoire')
             else :
-                if new_album :
+                if new_album and artist_id:
                     # ajouter_album(album, artiste_id)
                     new_album = None
                     artist_id = None
                 else :
-                    print("Aucun album en instance.")
+                    if not artist_id :
+                        print('Aucun artiste selectionné')
+                    if not new_album :
+                        print("Aucun album en instance.")
 
         else :     
             choice = loop_over_options(elements)
