@@ -1,5 +1,6 @@
 import json
 import sys
+from datetime import datetime
 
 def charger_catalogue(chemin) :
     """ Charge et retourne le JSON depuis le fichier """
@@ -39,3 +40,27 @@ def lister_artistes(catalogue) :
         )
     
     return data
+
+def ajouter_artiste(new_artist):
+
+    # Ecris les données d'un nouveau artiste dans le fihier json
+    try:
+        with open("catalogue.json", "r") as f:
+            donnees = json.load(f)
+    except(FileNotFoundError,json.JSONDecodeError):
+        donnees= []
+
+    donnees.append(new_artist)
+
+
+    with open("catalogue.json", "w") as f:
+        json.dump(donnees,f,indent=4)
+
+    print(f"L'artiste {new_artist['id']} a été ajouté")
+    ajouter_log(new_artist)
+
+
+def ajouter_log(new_artist):
+    #Mise à jour du fichier historique.log avec l'heure et date d'ajout d'un nouveau artiste
+    with open("historique.log", "a") as f:
+        f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - Infos: L'artiste {new_artist['id']} a été ajouté\n")
