@@ -154,15 +154,17 @@ while True :
             print(f"=== {elements[choice]} ===")
             
             if choice == 'a' :
+                catalogue = charger_catalogue(CATALOGUE)
                 id = get_string_value("Entrer l'ID de l'artiste", 'ID')
-                # artiste = rechercher_artiste_par_id(id)
-                # if artiste:
-                #     artiste_en detail(artiste)
-                       # artist_id = id
-                # print("Ce artiste n'existe pas.")
+                artiste = rechercher_artiste_par_id(catalogue,id)
+                if artiste:
+                    artiste_en_detail(artiste)
+                    artist_id = id
+                else :
+                    print("Ce artiste n'existe pas.")
 
             elif choice == 'b' :
-                titre = get_string_value("Entrer le titre de l'album")
+                titre = get_string_value("Entrer le titre de l'album",'Titre')
                 annee = ''
                 streams = ''
                 while not annee.isnumeric() or int(annee) < 0 or int(annee) > 2026 :
@@ -185,7 +187,7 @@ while True :
                 print('Nouveau album crée en mémoire')
             else :
                 if new_album and artist_id:
-                    # ajouter_album(album, artiste_id)
+                    ajouter_album(new_album, artist_id, chemin=CATALOGUE)
                     new_album = None
                     artist_id = None
                 else :

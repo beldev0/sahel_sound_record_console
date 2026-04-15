@@ -53,6 +53,30 @@ def ajouter_log(titre_album):
         f.write(ligne)
 
 
+def ajouter_album(album, artiste_id, chemin="catalogue.json"):
+    """
+    Ajoute un album à un artiste
+    """
+
+    # 1. Charger le catalogue
+    catalogue = charger_catalogue(chemin)
+
+    # 2. Trouver l'artiste avec filter()
+    artistes_trouves = list(filter(lambda a: a["id"] == artiste_id, catalogue))
+
+    artiste = artistes_trouves[0]
+
+    # 3. Ajouter l'album
+    artiste["albums"].append(album)
+
+    # 4. Ajouter log
+    ajouter_log(album["titre"])
+
+    # 5. Sauvegarder
+    sauvegarder_catalogue(catalogue, chemin)
+
+    # 6. Message
+    print(f"{album['titre']} a été enregistré")
 
 # Part Ola
 
