@@ -35,6 +35,7 @@ items = [
     "Quitter le programme"
 ]
 
+CATALOGUE = 'catalogue.json'
 
 new_album = None
 artist_id = None
@@ -79,12 +80,13 @@ while True :
             print(f"=== {elements[choice]} ===")
 
             if choice == "a":
-                catalogue_resume = lister_artistes('catalogue.json')
-                # afficher_resume_artiste(data)
-                pass
+                catalogue = charger_catalogue(CATALOGUE)
+                catalogue_resume = lister_artistes(catalogue)
+                afficher_resume_artiste(catalogue_resume)
             elif choice == "b":
                 critere = ''
                 valeur = ''
+                catalogue = charger_catalogue(CATALOGUE)
 
                 while critere.lower() not in ['nom', 'genre'] :
                     critere = input("Quelle est le critère de recherche (nom/genre) ? ")
@@ -95,10 +97,12 @@ while True :
                     valeur = input("Entrer la valeur du critère de recherche :")
                     if len(value) == 0 :
                         print("La valeur ne peut pas être vide")
+
                 
-                # artiste_trouve =  rechercher_artiste(catalogue, critere, valeur)
-                # afficher_resume_artiste(artiste_trouve)
-                pass
+                artiste_trouve = rechercher_artiste(catalogue, critere, valeur)
+                artiste_resume = lister_artistes(artiste_trouve)
+                afficher_resume_artiste(artiste_resume)
+                
             else :
                 id = ''
                 while not len(id) != 0 :
@@ -106,9 +110,12 @@ while True :
                     if len(id) == 0 :
                         print("L'ID ne peut pas être vide")
                 
-                # artiste = rechercher_artiste_par_id(id)
-                # artiste_en detail(artiste)
-                pass
+                catalogue = charger_catalogue(CATALOGUE)
+                artiste_trouve = rechercher_artiste_par_id(catalogue, id)
+                if artiste_trouve :
+                    artiste_en_detail(artiste_trouve)
+                else :
+                    print(f'Artiste {id} non trouvé')
 
         elif choice == 2 :
             choice = loop_over_options(elements)
