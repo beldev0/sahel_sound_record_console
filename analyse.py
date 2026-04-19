@@ -21,3 +21,11 @@ def get_top5() :
     .sum()
     .sort_values(ascending=False)
     .head(5))
+
+def stream_mean() :
+    df_albums = load_dataframe()
+    return (df_albums
+    .groupby("genre")["streams"]
+    .mean()
+    .sort_values(ascending=False)
+)
