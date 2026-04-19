@@ -5,121 +5,259 @@
     "genre": "Afrobeat",
     "pays": "RDC",
     "albums": [
-      { "titre": "Power Kosa Leka", "annee": 2013, "streams": 4200000 },
-      { "titre": "Tokooos", "annee": 2017, "streams": 6800000 }
+      {
+        "titre": "Power Kosa Leka",
+        "annee": 2013,
+        "streams": 4200000
+      },
+      {
+        "titre": "Tokooos",
+        "annee": 2017,
+        "streams": 6800000
+      },
+      {
+        "titre": "Tokooos II",
+        "annee": 2022,
+        "streams": 5100000
+      }
     ]
   },
   {
     "id": "ART-002",
-    "nom": "Yemi Alade",
-    "genre": "Afropop",
+    "nom": "Burna Boy",
+    "genre": "Afrobeat",
     "pays": "Nigeria",
     "albums": [
-      { "titre": "King of Queens", "annee": 2014, "streams": 3500000 },
-      { "titre": "Mama Africa", "annee": 2016, "streams": 5100000 },
-      { "titre": "Woman of Steel", "annee": 2019, "streams": 4700000 }
+      {
+        "titre": "African Giant",
+        "annee": 2019,
+        "streams": 9500000
+      },
+      {
+        "titre": "Twice as Tall",
+        "annee": 2020,
+        "streams": 12300000
+      },
+      {
+        "titre": "Love, Damini",
+        "annee": 2022,
+        "streams": 15800000
+      }
     ]
   },
   {
     "id": "ART-003",
-    "nom": "Sarkodie",
-    "genre": "Hip-Hop",
-    "pays": "Ghana",
-    "albums": [
-      { "titre": "Rapperholic", "annee": 2012, "streams": 3900000 }
-    ]
-  },
-  {
-    "id": "ART-004",
-    "nom": "Angélique Kidjo",
-    "genre": "World Music",
-    "pays": "Bénin",
-    "albums": [
-      { "titre": "Eve", "annee": 2014, "streams": 2100000 },
-      { "titre": "Celia", "annee": 2019, "streams": 3300000 }
-    ]
-  },
-  {
-    "id": "ART-005",
-    "nom": "Burna Boy",
-    "genre": "Afrofusion",
-    "pays": "Nigeria",
-    "albums": [
-      { "titre": "Outside", "annee": 2018, "streams": 7200000 },
-      { "titre": "African Giant", "annee": 2019, "streams": 9800000 },
-      { "titre": "Twice as Tall", "annee": 2020, "streams": 8700000 },
-      { "titre": "I Told Them", "annee": 2023, "streams": 7600000 }
-    ]
-  },
-  {
-    "id": "ART-006",
-    "nom": "Davido",
-    "genre": "Afrobeat",
-    "pays": "Nigeria",
-    "albums": [
-      { "titre": "Omo Baba Olowo", "annee": 2012, "streams": 4100000 },
-      { "titre": "A Good Time", "annee": 2019, "streams": 6900000 }
-    ]
-  },
-  {
-    "id": "ART-007",
-    "nom": "Diamond Platnumz",
-    "genre": "Bongo Flava",
-    "pays": "Tanzanie",
-    "albums": [
-      { "titre": "Lala Salama", "annee": 2012, "streams": 2500000 },
-      { "titre": "A Boy from Tandale", "annee": 2018, "streams": 5600000 },
-      { "titre": "First of All", "annee": 2022, "streams": 4300000 }
-    ]
-  },
-  {
-    "id": "ART-008",
     "nom": "Aya Nakamura",
     "genre": "Afropop",
     "pays": "Mali",
     "albums": [
-      { "titre": "Journal Intime", "annee": 2017, "streams": 3000000 }
+      {
+        "titre": "Nakamura",
+        "annee": 2018,
+        "streams": 11000000
+      },
+      {
+        "titre": "Journal intime",
+        "annee": 2019,
+        "streams": 8700000
+      },
+      {
+        "titre": "DNK",
+        "annee": 2021,
+        "streams": 13400000
+      }
+    ]
+  },
+  {
+    "id": "ART-004",
+    "nom": "Sidiki Diabaté",
+    "genre": "Mandingue",
+    "pays": "Mali",
+    "albums": [
+      {
+        "titre": "Sababu",
+        "annee": 2015,
+        "streams": 2100000
+      },
+      {
+        "titre": "Histoire d'amour",
+        "annee": 2018,
+        "streams": 3400000
+      }
+    ]
+  },
+  {
+    "id": "ART-005",
+    "nom": "Serge Beynaud",
+    "genre": "Coupé-Décalé",
+    "pays": "Côte d'Ivoire",
+    "albums": [
+      {
+        "titre": "Mglacé",
+        "annee": 2013,
+        "streams": 1800000
+      },
+      {
+        "titre": "Afrique en fête",
+        "annee": 2016,
+        "streams": 2900000
+      },
+      {
+        "titre": "Motivation",
+        "annee": 2020,
+        "streams": 3700000
+      }
+    ]
+  },
+  {
+    "id": "ART-006",
+    "nom": "Youssou N'Dour",
+    "genre": "Mbalax",
+    "pays": "Sénégal",
+    "albums": [
+      {
+        "titre": "Egypt",
+        "annee": 2004,
+        "streams": 1500000
+      },
+      {
+        "titre": "Dakar-Kingston",
+        "annee": 2010,
+        "streams": 980000
+      },
+      {
+        "titre": "History",
+        "annee": 2015,
+        "streams": 1200000
+      }
+    ]
+  },
+  {
+    "id": "ART-007",
+    "nom": "Davido",
+    "genre": "Afrobeats",
+    "pays": "Nigeria",
+    "albums": [
+      {
+        "titre": "A Good Time",
+        "annee": 2019,
+        "streams": 8900000
+      },
+      {
+        "titre": "A Better Time",
+        "annee": 2020,
+        "streams": 10200000
+      },
+      {
+        "titre": "Timeless",
+        "annee": 2023,
+        "streams": 14100000
+      }
+    ]
+  },
+  {
+    "id": "ART-008",
+    "nom": "Ami Koité",
+    "genre": "Blues Mandingue",
+    "pays": "Mali",
+    "albums": [
+      {
+        "titre": "Haïra",
+        "annee": 2012,
+        "streams": 540000
+      },
+      {
+        "titre": "Fenfo",
+        "annee": 2018,
+        "streams": 870000
+      }
     ]
   },
   {
     "id": "ART-009",
-    "nom": "Koffi Olomide",
-    "genre": "Rumba",
-    "pays": "RDC",
+    "nom": "Vano Baby",
+    "genre": "Hip-hop",
+    "pays": "Bénin",
     "albums": [
-      { "titre": "Loi", "annee": 1997, "streams": 1500000 },
-      { "titre": "Attentat", "annee": 1999, "streams": 1800000 },
-      { "titre": "13ème Apôtre", "annee": 2006, "streams": 2100000 }
+      {
+        "titre": "Gangster Romantique",
+        "annee": 2018,
+        "streams": 1200000
+      },
+      {
+        "titre": "Bénin City",
+        "annee": 2020,
+        "streams": 1850000
+      },
+      {
+        "titre": "L'Instinct",
+        "annee": 2022,
+        "streams": 2400000
+      }
     ]
   },
   {
     "id": "ART-010",
-    "nom": "Josey",
-    "genre": "Coupé-Décalé",
-    "pays": "Côte d'Ivoire",
+    "nom": "Charlotte Dipanda",
+    "genre": "Afropop",
+    "pays": "Cameroun",
     "albums": [
-      { "titre": "Cocktail", "annee": 2018, "streams": 2200000 }
+      {
+        "titre": "Ntankama",
+        "annee": 2009,
+        "streams": 620000
+      },
+      {
+        "titre": "La Voix du Pays",
+        "annee": 2014,
+        "streams": 890000
+      },
+      {
+        "titre": "Liberté",
+        "annee": 2020,
+        "streams": 1350000
+      }
     ]
   },
   {
     "id": "ART-011",
-    "nom": "Mr Eazi",
-    "genre": "Afrobeat",
-    "pays": "Nigeria",
+    "nom": "Master Soumy",
+    "genre": "Hip-hop",
+    "pays": "Mali",
     "albums": [
-      { "titre": "Life is Eazi Vol. 1", "annee": 2017, "streams": 4800000 },
-      { "titre": "Life is Eazi Vol. 2", "annee": 2018, "streams": 5300000 }
+      {
+        "titre": "Le Griot Moderne",
+        "annee": 2016,
+        "streams": 730000
+      },
+      {
+        "titre": "Réveil",
+        "annee": 2020,
+        "streams": 1100000
+      }
     ]
   },
   {
     "id": "ART-012",
-    "nom": "Sauti Sol",
-    "genre": "Afropop",
-    "pays": "Kenya",
+    "nom": "Dip Doundou Guiss",
+    "genre": "Hip-hop",
+    "pays": "Sénégal",
     "albums": [
-      { "titre": "Live and Die in Afrika", "annee": 2015, "streams": 2600000 },
-      { "titre": "Afrikan Sauce", "annee": 2019, "streams": 3400000 },
-      { "titre": "Midnight Train", "annee": 2020, "streams": 3900000 }
+      {
+        "titre": "Beuss Niki Tay",
+        "annee": 2014,
+        "streams": 2100000
+      },
+      {
+        "titre": "TLK",
+        "annee": 2016,
+        "streams": 3400000
+      },
+      {
+        "titre": "Lepp Fi Lanu Fekk",
+        "annee": 2023,
+        "streams": 5800000
+      }
     ]
   }
 ]
