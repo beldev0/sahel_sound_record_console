@@ -136,15 +136,16 @@ while True :
                 print("Nouveau artiste crée")
 
             elif choice == 'b':
+                catalogue = charger_catalogue(CATALOGUE)
                 id = get_string_value("Entrer l'ID de l'artiste", 'ID')
-                # artiste = rechercher_artiste_par_id(id)
-                # if artiste:
-                #     print("L'ID existe déjà")
-                # print("ID pas encore existant")
+                artiste = rechercher_artiste_par_id(catalogue,id)
+                if artiste:
+                    print("L'ID existe déjà")
+                print("ID pas encore existant")
             
             else :
                 if new_artist :
-                    # ajouter_artiste(new_artist) 
+                    ajouter_artiste(new_artist) 
                     new_artist = None
                 else :
                     print("Il n'y a pas d'artiste en instance")
