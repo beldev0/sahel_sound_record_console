@@ -29,3 +29,12 @@ def stream_mean() :
     .mean()
     .sort_values(ascending=False)
 )
+
+def album_per_year() :
+    df_albums = load_dataframe()
+
+    return (
+    df_albums
+    .groupby("annee")
+    .size()
+    .sort_index())
