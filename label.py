@@ -1,7 +1,6 @@
 import json
 import sys
 from datetime import datetime
-from datetime import datetime
 
 def charger_catalogue(chemin) :
     """ Charge et retourne le JSON depuis le fichier """
@@ -134,6 +133,8 @@ def artiste_en_detail(artiste) :
         print()
 
     print()
+
+# Part Ezéchias
 
 def ajouter_artiste(new_artist):
 
