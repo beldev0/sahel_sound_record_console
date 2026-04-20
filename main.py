@@ -1,4 +1,5 @@
 from label import *
+from analyse import *
 
 menu_items = {
     1 : {
@@ -45,21 +46,21 @@ def loop_over_options(elements):
     for key, value in elements.items() :
         print(f"{key}. {value}")
     choice = ""
-    while not choice.lower() in elements.keys():
+    while not choice.lower().strip() in elements.keys():
         choice = input("\nQue souhaitez vous faire ?\n")
 
     print()
-    return choice.lower()
+    return choice.lower().strip()
 
 def get_string_value(entree, field):
     text = ''
-    while not len(text) != 0 :
+    while not len(text.strip()) != 0 :
         print(f"{entree}")
         text = input("")
-        if len(text) == 0 :
+        if len(text.strip()) == 0 :
             print(f"{field} ne peut pas être vide")
 
-    return text
+    return text.lower().strip()
 
 while True :
     for index, value in enumerate(items) :
@@ -88,28 +89,30 @@ while True :
                 valeur = ''
                 catalogue = charger_catalogue(CATALOGUE)
 
-                while critere.lower() not in ['nom', 'genre'] :
+                while critere.lower().strip() not in ['nom', 'genre'] :
                     critere = input("Quelle est le critère de recherche (nom/genre) ? ")
-                    if critere not in ['nom', 'genre'] :
+                    if critere.lower().strip() not in ['nom', 'genre'] :
                         print("Vous devre choisir entre (nom/genre)")
                 
-                while not len(valeur) != 0 :
+                while not len(valeur.strip()) != 0 :
                     valeur = input("Entrer la valeur du critère de recherche :")
-                    if len(value) == 0 :
+                    if len(value.strip()) == 0 :
                         print("La valeur ne peut pas être vide")
 
-                
+                valeur  = valeur.lower().strip()
+                critere = critere.lower().strip()
                 artiste_trouve = rechercher_artiste(catalogue, critere, valeur)
                 artiste_resume = lister_artistes(artiste_trouve)
                 afficher_resume_artiste(artiste_resume)
                 
             else :
                 id = ''
-                while not len(id) != 0 :
+                while not len(id.strip()) != 0 :
                     id = input("Entrer l'ID de l'artiste : ")
-                    if len(id) == 0 :
+                    if len(id.strip()) == 0 :
                         print("L'ID ne peut pas être vide")
-                
+
+                id = id.strip().lower()
                 catalogue = charger_catalogue(CATALOGUE)
                 artiste_trouve = rechercher_artiste_par_id(catalogue, id)
                 if artiste_trouve :
@@ -122,7 +125,15 @@ while True :
             print(f"=== {elements[choice]} ===")
 
             if choice == 'a':
+                catalogue = charger_catalogue(CATALOGUE)
                 id = get_string_value("Entrer l'ID de l'artiste", 'ID')
+                artiste_trouve = rechercher_artiste_par_id(catalogue, id)
+
+                while artiste_trouve :
+                    print("Un artiste existe déjà avec ce ID")
+                    id = get_string_value("Entrer l'ID de l'artiste", 'ID')
+                    artiste_trouve = rechercher_artiste_par_id(catalogue, id)
+
                 nom = get_string_value("Entrer le nom de l'artiste", 'Nom')
                 pays = get_string_value("Entrer le pays de l'artiste", "Pays")
                 genre = get_string_value("Entrer le genre musical", "Genre")
@@ -201,15 +212,16 @@ while True :
             choice = loop_over_options(elements)
             print(f"=== {elements[choice]} ===")
             if choice == 'a' :
-                pass
+                print(get_top5())
             elif choice == 'b' :
-                pass
+                print(stream_mean())
             elif choice == 'c' :
-                pass
+                print(album_per_year())
             else :
-                pass
+                export_csv_rapport()
     else :
         break
    
 
 print("FIN DU PROGRAMME")
+
