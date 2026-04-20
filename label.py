@@ -41,7 +41,7 @@ def lister_artistes(catalogue) :
 
 # Part Houéfa
 
-def ajouter_log(titre_album):
+def ajouter_log_album(titre_album):
     """
     Ajoute une ligne dans historique.log a chaque modifications du catalogue
     """
@@ -62,15 +62,19 @@ def ajouter_album(album, artiste_id, chemin="catalogue.json"):
     catalogue = charger_catalogue(chemin)
 
     # 2. Trouver l'artiste avec filter()
-    artistes_trouves = list(filter(lambda a: a["id"] == artiste_id, catalogue))
+    artistes_trouves = list(filter(lambda a: a["id"].lower() == artiste_id.lower().strip(), catalogue))
 
     artiste = artistes_trouves[0]
+    
+    if album['titre'].lower().strip() in [el['titre'].lower() for el in artiste['albums']] :
+        print("Un album de ce nom a déjà été enregsitré !")
+        return
 
     # 3. Ajouter l'album
     artiste["albums"].append(album)
 
     # 4. Ajouter log
-    ajouter_log(album["titre"])
+    ajouter_log_album(album["titre"])
 
     # 5. Sauvegarder
     sauvegarder_catalogue(catalogue, chemin)
@@ -109,7 +113,7 @@ def rechercher_artiste(catalogue, critere, valeur) :
 
 
 def rechercher_artiste_par_id(catalogue, id) :
-    found = list(filter(lambda element:element['id']==id, catalogue))
+    found = list(filter(lambda element:element['id'].lower() == id, catalogue))
     if found :
         return found[0]
     return None
@@ -152,10 +156,12 @@ def ajouter_artiste(new_artist):
         json.dump(donnees,f,indent=4)
 
     print(f"L'artiste {new_artist['id']} a été ajouté")
-    ajouter_log(new_artist)
+    ajouter_log_artiste(new_artist)
 
 
-def ajouter_log(new_artist):
+def ajouter_log_artiste(new_artist):
     #Mise à jour du fichier historique.log avec l'heure et date d'ajout d'un nouveau artiste
     with open("historique.log", "a") as f:
         f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - Infos: L'artiste {new_artist['id']} a été ajouté\n")
+
+
